@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     dacoolTableView.dataSource = self
     dacoolTableView.delegate = self
         
-        
+    //test
     
     }
 
@@ -38,8 +38,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell()
         cell.textLabel?.text = emojis[indexPath.row]
         return cell
-        
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moveSeque", sender: "🏠")
     }
     
     override func didReceiveMemoryWarning() {
